@@ -14,34 +14,7 @@
 <body>
 
 
-    <!-- Navbar Starts -->
-    <section id="nav-bar">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand font-weight-bold" href="#" style="color: yellow;">BANK</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-             <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-             </li>
-             <li class="nav-item">
-                <a class="nav-link" href="#">Net Banking</a>
-             </li>
-             <li class="nav-item">
-                <a class="nav-link" href="#">Predictions</a>
-             </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
-             </li>
-             
-        </ul>
-    </div>
-    </nav>
-    </section>
-    <!-- Navbar Ends -->
-    
+  
     
         
         <form action="{{ url_for('predict')}}" method="post">
@@ -57,30 +30,30 @@
 			        <span class="icon-case"></span>
 				        <input name="CreditScore" type="number" >
                 <div class="validation"></div>
-       </div> 
+            </div> 
 
             <div class="form-group">
             <p>Age <span>*</span></p>
             <span class="icon-case"></span>
-				<input name="Age" required="required">
+				     <input name="Age" required="required">
                 <div class="validation"></div>
-			</div>
-      <div class="form-group">
-        <p>Gender of Customer:  <span>*</span></p>	
-        <span class="icon-case"></span>
+			      </div>
+            <div class="form-group">
+              <p>Gender of Customer:  <span>*</span></p>	
+               <span class="icon-case"></span>
                   <select name="Gender_Male" id="resea" required="required">
                   <option value="Male">Male</option>
                   <option value="Female">Female</option>
               </select>
                   <div class="validation"></div>
-        </div>
+             </div>
       
-			<div class="form-group">
-			<p>Tenure <span>*</span></p>	
-			<span class="icon-case"></span>
+			         <div class="form-group">
+			       <p>Tenure <span>*</span></p>	
+			        <span class="icon-case"></span>
                 <input name="Tenure" required="required">
                 <div class="validation"></div>
-			</div>	
+			         </div>	
 
 			<div class="form-group">
 			<p>Enter the Account Balance:  <span>*</span></p>
@@ -88,27 +61,21 @@
 				<input name="Balance" required="required">
                 <div class="validation"></div>
 			</div>
-
+      </div>
+      <div class="rightcontact">
 			<div class="form-group">
 			<p>Number of Products <span>*</span></p>
 			<span class="icon-case"></span>
 				<input name="NumOfProducts" required="required">
                 <div class="validation"></div>
 			</div>
-
+     	
 			<div class="form-group">
 			<p>Do the Customer have Credit Card? (1=Yes, 0=No) <span>*</span></p>
 			<span class="icon-case"></span>
 				<input name="HasCrCard" required="required">
                 <div class="validation"></div>
 			</div>	
-
-
-
-	</div>
-
-	<div class="rightcontact">	
-
 			<div class="form-group">
 			<p>Is the Customer Active Member (1=Yes, 0=No)<span>*</span></p>
 			<span class="icon-case"></span>
@@ -148,36 +115,7 @@
 
         <br><br><h3 class="alert alert-primary text-center" role="alert">{{ prediction_text }}<h3>
     </div>
-    <!-- Footer -->
-        <!-- Footer -->
-    <div class="unique-color-dark mt-4 white-text " style="background-color: #1c2331 !important;">
-      <div class="blue-gradient">
-        <div class="container">
-          <!-- Grid row-->
-          <div class="row py-3 d-flex align-items-center">
-            <!-- Grid column -->
-            <div
-              class="col-md-6 col-lg-5 text-center text-md-left"
-            >
-              <h6 class="mb-0 text-white">Developed by Manan Bedi   <a href="https://github.com/manan-bedi2908/Customer_Churn-Deployment"><i class="ml-5 fa fa-github fa-2x" aria-hidden="true"></i></a><a href="https://www.linkedin.com/in/manan-bedi-20a80a190/"><i class="ml-5 fa fa-linkedin fa-2x" aria-hidden="true"></i></a></h6>
-            </div>
-            <!-- Grid column -->
-
-            
-            <!-- Grid column -->
-          </div>
-          <!-- Grid row-->
-        </div>
-      </div>
-
-
-
-
-    <style>
-     
-
-
-    </style>
+  
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
