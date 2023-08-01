@@ -49,7 +49,7 @@ def predict():
             Geography_France = 1
        
         prediction = model.predict([[CreditScore,Age,Gender_Male,Tenure,Balance,NumOfProducts,HasCrCard,IsActiveMember,EstimatedSalary,Geography_France,Geography_Germany,Geography_Spain]])
-        if prediction[0]==1:
+        if prediction==0:
              return render_template('index.html',prediction_text="The Customer will leave the bank")
         else:
              return render_template('index.html',prediction_text="The Customer will not leave the bank")
